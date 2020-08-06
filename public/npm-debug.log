@@ -1,0 +1,98 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/local/bin/npm', 'install', 'dataTables' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData dataTables
+8 silly fetchNamedPackageData dataTables
+9 silly mapToRegistry name dataTables
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/dataTables
+13 verbose request uri https://registry.npmjs.org/dataTables
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 11:05:06
+16 verbose request id 9f9189d94e6cc789
+17 http request GET https://registry.npmjs.org/dataTables
+18 http 404 https://registry.npmjs.org/dataTables
+19 verbose headers { date: 'Wed, 05 Aug 2020 11:05:07 GMT',
+19 verbose headers   'content-type': 'application/json',
+19 verbose headers   'content-length': '21',
+19 verbose headers   connection: 'keep-alive',
+19 verbose headers   'set-cookie':
+19 verbose headers    [ '__cfduid=d48ea1dc5506929881f58c80019ff4d6d1596625506; expires=Fri, 04-Sep-20 11:05:06 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+19 verbose headers   'cf-ray': '5be00a88aaf5edeb-CDG',
+19 verbose headers   vary: 'Accept-Encoding',
+19 verbose headers   'cf-cache-status': 'MISS',
+19 verbose headers   'cf-request-id': '045fe4e9660000edeb5c21b200000001',
+19 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+19 verbose headers   server: 'cloudflare' }
+20 silly get cb [ 404,
+20 silly get   { date: 'Wed, 05 Aug 2020 11:05:07 GMT',
+20 silly get     'content-type': 'application/json',
+20 silly get     'content-length': '21',
+20 silly get     connection: 'keep-alive',
+20 silly get     'set-cookie':
+20 silly get      [ '__cfduid=d48ea1dc5506929881f58c80019ff4d6d1596625506; expires=Fri, 04-Sep-20 11:05:06 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+20 silly get     'cf-ray': '5be00a88aaf5edeb-CDG',
+20 silly get     vary: 'Accept-Encoding',
+20 silly get     'cf-cache-status': 'MISS',
+20 silly get     'cf-request-id': '045fe4e9660000edeb5c21b200000001',
+20 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+20 silly get     server: 'cloudflare' } ]
+21 silly fetchPackageMetaData Error: Not found : dataTables
+21 silly fetchPackageMetaData     at makeError (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+21 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+21 silly fetchPackageMetaData     at Request._callback (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+21 silly fetchPackageMetaData     at Request.self.callback (/usr/share/npm/node_modules/request/request.js:198:22)
+21 silly fetchPackageMetaData     at emitTwo (events.js:126:13)
+21 silly fetchPackageMetaData     at Request.emit (events.js:214:7)
+21 silly fetchPackageMetaData     at Request.<anonymous> (/usr/share/npm/node_modules/request/request.js:1082:10)
+21 silly fetchPackageMetaData     at emitOne (events.js:121:20)
+21 silly fetchPackageMetaData     at Request.emit (events.js:211:7)
+21 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/share/npm/node_modules/request/request.js:1009:12)
+21 silly fetchPackageMetaData  error for dataTables { Error: Not found : dataTables
+21 silly fetchPackageMetaData     at makeError (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+21 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+21 silly fetchPackageMetaData     at Request._callback (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+21 silly fetchPackageMetaData     at Request.self.callback (/usr/share/npm/node_modules/request/request.js:198:22)
+21 silly fetchPackageMetaData     at emitTwo (events.js:126:13)
+21 silly fetchPackageMetaData     at Request.emit (events.js:214:7)
+21 silly fetchPackageMetaData     at Request.<anonymous> (/usr/share/npm/node_modules/request/request.js:1082:10)
+21 silly fetchPackageMetaData     at emitOne (events.js:121:20)
+21 silly fetchPackageMetaData     at Request.emit (events.js:211:7)
+21 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/share/npm/node_modules/request/request.js:1009:12) pkgid: 'dataTables', statusCode: 404, code: 'E404' }
+22 silly rollbackFailedOptional Starting
+23 silly rollbackFailedOptional Finishing
+24 silly runTopLevelLifecycles Starting
+25 silly runTopLevelLifecycles Finishing
+26 silly install printInstalled
+27 verbose stack Error: Not found : dataTables
+27 verbose stack     at makeError (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+27 verbose stack     at CachingRegistryClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+27 verbose stack     at Request._callback (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+27 verbose stack     at Request.self.callback (/usr/share/npm/node_modules/request/request.js:198:22)
+27 verbose stack     at emitTwo (events.js:126:13)
+27 verbose stack     at Request.emit (events.js:214:7)
+27 verbose stack     at Request.<anonymous> (/usr/share/npm/node_modules/request/request.js:1082:10)
+27 verbose stack     at emitOne (events.js:121:20)
+27 verbose stack     at Request.emit (events.js:211:7)
+27 verbose stack     at IncomingMessage.<anonymous> (/usr/share/npm/node_modules/request/request.js:1009:12)
+28 verbose statusCode 404
+29 verbose pkgid dataTables
+30 verbose cwd /opt/lampp/htdocs/projets/simplon/tpORMDoctrine/public
+31 error Linux 5.4.0-42-generic
+32 error argv "/usr/bin/node" "/usr/local/bin/npm" "install" "dataTables"
+33 error node v8.10.0
+34 error npm  v3.5.2
+35 error code E404
+36 error 404 Not found : dataTables
+37 error 404
+38 error 404 'dataTables' is not in the npm registry.
+39 error 404 Your package name is not valid, because
+40 error 404 1. name can no longer contain capital letters
+41 error 404 Note that you can also install from a
+42 error 404 tarball, folder, http url, or git url.
+43 verbose exit [ 1, true ]

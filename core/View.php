@@ -16,6 +16,7 @@ namespace core;
 
         private function chargerDonnees($page, $args = array()){
             $data = $args;
+            //extract($dara);
             $page = 'application/view/'.$page.'.php';
             if(file_exists($page)){
                 require_once $page;

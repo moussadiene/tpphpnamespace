@@ -1,19 +1,65 @@
 <?php
+    namespace application\entities;
+    use Doctrine\ORM\Mapping as ORM;
+    use Doctrine\Common\Collections\ArrayCollection;
 
-namespace application\entities;
+    /**
+     * @ORM\Entity 
+     * @ORM\Table(name="entreprise")
+    **/
+    class Entreprise{
+        /**
+         * @ORM\Id 
+         * @ORM\Column(type="integer") 
+         * @ORM\GeneratedValue 
+         **/
+        private $id;
 
-use core\Model;
-    class Entreprise extends Model{
-        private $id = null;
+        /**
+         * @ORM\Column(type="string") 
+         **/
         private $nomEntreprise;
+        /**
+         * @ORM\Column(type="string") 
+         **/
         private $adresse ;
+        /**
+         * @ORM\Column(type="string") 
+         **/
         private $telephone;
+        /**
+         * @ORM\Column(type="string") 
+         **/
         private $email;
+        /**
+         * @ORM\Column(type="string",nullable=true)
+         **/
         private $login;
+        /**
+         * @ORM\Column(type="string",nullable=true) 
+         **/
         private $password;
+        /**
+         * @ORM\Column(type="decimal") 
+         **/
         private $budget;
 
-        public function __construct(){parent::__construct(); }
+        /**
+         * One entreprise has many comptes. This is the inverse side.
+         * @ORM\OneToMany(targetEntity="Compte", mappedBy="entreprise")
+         */
+        private $comptes;
+
+        /**
+         * One client has many comptes. This is the inverse side.
+         * @ORM\OneToMany(targetEntity="Client", mappedBy="entreprise")
+         */
+        private $clients;
+
+        public function __construct(){ 
+            $this->comptes = new ArrayCollection();
+            $this->clients = new ArrayCollection();
+        }
         //Getters
         public function getId(){return $this->id;}
         public function getNomEntreprise(){return $this->nomEntreprise;}
@@ -24,6 +70,9 @@ use core\Model;
         public function getPassword(){return $this->password;}
         public function getBudget(){return $this->budget;}
 
+        public function getComptes(){return $this->comptes;}
+        public function getClient(){return $this->clients;}
+
        //Setters
        public function setNomEntreprise($nomEntreprise){ $this->nomEntreprise = $nomEntreprise;}
        public function setTelephone($telephone){ $this->telephone = $telephone;}
@@ -33,6 +82,8 @@ use core\Model;
        public function setPassword($password = null){ $this->password = $password;}
        public function setBudjet($budget){ $this->budget = $budget;}
 
+       public function setComptes($comptes){ $this->comptes = $comptes;}
+       public function setClient($clients){ $this->clients = $clients;}
     }
 
 ?>

@@ -1,0 +1,10 @@
+{
+    "require": {
+        "doctrine/orm": "^2.6.2",
+        "symfony/yaml": "2.*",
+        "twbs/bootstrap": "4.2.1"
+    },
+    "autoload": {
+        "psr-0": {"": "src/"}
+    }
+}

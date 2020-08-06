@@ -1,293 +1,177 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/tp3namespace/public/css/test.css" />
-    <title>tp2-html-css-js</title>
+    <title>Document</title>
+    <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">    
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"-->
+      <!-- <link href="./node_modules/bootstrap/dist/css/bootstrap-grid.css.map" rel="stylesheet" type="text/css">
+      <link href="./node_modules/bootstrap/dist/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css">
+      <link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css.map" rel="stylesheet" type="text/css">
+      <link href="" rel="stylesheet" type="text/css"> -->
+      <script
+  src="./node_modules/jquery/dist/jquery.min.js" rel="stylesheet"></script>
+  <!-- CSS only -->
+<link href="./node_modules/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet">
+<link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="./node_modules/bootstrap/dist/css/bootstrap-reboot.min.css" rel="stylesheet">
+<link href="./node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<style>
+  .active{
+    background-color: #666666;
+
+  }
+  .nav-item {
+    padding: 0px 5px;
+    border-radius: 3px;
+  }
+</style>
+<!-- JS, Popper.js, and jQuery -->
+<script src="./node_modules/jquery/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+    <script src="./node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="./node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+      $(document).ready(function() {
+          $('#myTable').DataTable();
+      } );
+</script>
+<style>
+  
+</style>
 </head>
-<body>
-    <div id="content">
-
-    </div>
-    <header id="top" class="bg-white">
-        <nav  class="flex-row">
-            <div class="logo">
-                <a href="#"><img src="/tp3POO/public/img/logo-Recupere.png" alt="logo banque du peuple" class="image"/></a>
-            </div>
-            <div class="texte plus-grand text-center">
-                <h1 class="title-banque"> Banque du peuple </h1>
-            </div>
-            <d  iv class="user-logo">
-                <a href="#"><img src="/tp3POO/public/img/user.jpeg" alt="logo banque du peuple" class="image"/></a>
-            </d>
+<body >
+  <div class="container  col-lg-12">
+    <div class="row" id="top">
+      <div class="container col-md-12" >
+        <nav class="navbar navbar-expand-sm bg-info navbar-dark navbar-fixed-top">
+          <a class="navbar-brand col-lg-9" href="#">Logo</a>
+          <form class="form-inline" action="/action_page.php">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-dark" type="btn">Ok</button>
+          </form>
         </nav>
-    </header>
-    <main class="flex-row">
-        <section id="left" class="bg-white">
-            <div class="info-user flex-row">
-                <div class="img">
-                    <a href="#"><img src="/tp3POO/public/img/user.jpeg" alt="logo banque du peuple" class="image"/></a>
-                </div>
-                <div class="plus-grand">
-                    <p>Moussa DIENE</p>
-                    <p>Fonction : Responsable</p>
-                    <p>Agence : AZER1231</p>
+      </div>
+    </div>
+    <div class="row col-lg-12" id="bottom">
+      <div class="col-lg-3 " id="left" style="margin-top: 20px;">
+        <div class="card col-lg-12 bg-info">
+            <div class="card-body">
+                Navigation
+            </div>
+        </div>
+        <div class="card col-lg-12 text-center " style="width:100%">
+          <div class="card-body row">
+            <img src="./public/img/Profil.jpg" class="img-responsive rounded-circle col-lg-5" alt="Profil">
+            <div class="col-lg-7">
+              <h6 class="card-title">Moussa DIENE</h6>
+              <p class="card-text"><i>Fonction : Responsable</i>.</p>
+            </div>
+          </div>
+          <a href="#" class="btn btn-info btn-block">profil</a>
+        </div>
+        <div class="card bg-info" style="margin-top: 20px;">
+          <div class="card-body">
+            <nav class="navbar navbar-dark bg-info col-lg-12">
+              <ul class="navbar-nav col-lg-12">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#"><span class="fa fa-home"></span> &ThinSpace;&ThinSpace; Dashboad</a>
+
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#"><span class="fa fa-user"></span> &ThinSpace;&ThinSpace;Gestion Client</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="fas fa-briefcase"></i> &ThinSpace;&ThinSpace;Gestion Compte</a>
+                  </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-9" style="margin-top: 20px;">
+          <div class="row">
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+                Ajouter
+            </button>
+          </div>
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                          <h4 class="modal-title">Ajouter un nouveau client</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                      Modal body..
+                      </div>
+
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                      <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                      </div>
+
+                  </div>
                 </div>
             </div>
-            <hr class="trait bg-red"/>
-            <div class="site-bar">
-                <div class="marge">
-                    <img src="/tp3namespace/public/img/compte.png" alt="ok" class="icone" />
-                    <a href="#" class="bolt"> Gestion Compte </a>
-                    <ul>
-                        <li><a href="#"> Ajouter Compte </a></li>
-                        <li><a href="#"> Lister Compte </a></li>
-                        <li><a href="#"> Fermer Compte </a></li>
-                    </ul>
-                </div>
-                <div class="marge">
-                    <img src="/tp3POO/public/img/compte.png" alt="ok" class="icone"  />
-                    <a href="#" class="bolt"> Opération bancaire </a>
-                    <ul>
-                        <li><a href="#"> Opération de virement  </a></li>
-                    </ul>
-                </div>
+
+          <div class="row"  style="margin-top: 20px;" >
+            <div class="card"  style="width:100%">
+              <div class="card-header bg-info">Liste des Client :::</div>
+              <div class="card-body">
+                <table id="myTable" class="table table-striped table-bordered" style="width:100%">
+                  <thead>
+                    <tr>
+                      <th class="th-sm">Name</th>
+                      <th class="th-sm">Position</th>
+                      <th class="th-sm">Office</th>
+                      <th class="th-sm">Age
+                      </th>
+                      <th class="th-sm">Start date
+                      </th>
+                      <th class="th-sm">Salary
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    <tr>
+                      <td>Martena Mccray</td>
+                      <td>Post-Sales support</td>
+                      <td>Edinburgh</td>
+                      <td>46</td>
+                      <td>2011/03/09</td>
+                      <td>$324,050</td>
+                    </tr>
+                    <tr>
+                      <td>Unity Butler</td>
+                      <td>Marketing Designer</td>
+                      <td>San Francisco</td>
+                      <td>47</td>
+                      <td>2009/12/09</td>
+                      <td>$85,675</td>
+                    </tr>
+                  </tbody>
+
+                </table>
+              </div>
+              <div class="card-footer">Footer</div>
             </div>
-            <hr class="trait bg-red"/>
-            <div class="">
-                <input type="button" class="btn bg-red " value="Se déconnecter">
-            </div>
-        </section>
-        <section id="contain" class="plus-grand bg-white">
-            <!--onsubmit="return FormValider(this)" -->
-            <form  action="add" method="POST"  onsubmit="return FormValider(this)" id="form">
-                    <div id="taplap" class="flex-row flex-center">
-                        <div class="item bg-red">
-                            Client :
-                        </div>
-                        <div class="item bg-red">
-                            Information Client :
-                        </div>
-                        <div class="item bg-red">
-                            Information Compte :
-                        </div>
-                    </div>
-    
-                   <!-- <div class="flex-row flex-right">
-                        <div id="notif flex-col">
-                            <div>ok</div>
-                            <div>&times;</div>
-                        </div>
-                   </div> -->
-                    <div class="flex-col text-center marge">
-                        <?if(isset($data['res'])){
-                                if($data['res']== 1){
-                                    echo '<p id="success" class="bg-success flex-center"> Compte ajouter avec success</p>';
-                                }else{
-                                    echo '<p id="erreur" class="bg-erreur"> Erreur d\'ajouter  </p>';
-                                }
-                            }
-                        ?>
-                    </div>
-                <hr class="marge"/>
-                <div id="contenue">
-                    <div id="form_client" class="flex-row flex-right">
-                        <div class="radio">
-                            <input type="radio" name="choix_client" id="nouveau" value="nouveau" onclick="choixClient()"/>
-                            <label for="ok1">Nouveau</label>
-                        </div>
-                        <div class="radio">
-                            <input type="radio" name="choix_client" id="existant" value="existant" onclick="choixClient()"/>
-                            <label for="ok2">Existant</label>
-                        </div>
-                    </div>
-                    <div class="flex-row">
-                        <div id="form_type_client">
-                            <fieldset>
-                                <legend class="text-center"> Type de Client</legend>
-                                <div class="flex-row">
-                                    <div class="radio">
-                                        <input type="radio" name="choix_type_client" id="physique" value="physique" onclick="choixTypeClient()"/>
-                                        <label for="ok1">Physique</label>
-                                    </div>
-                                    <div class="radio">
-                                        <input type="radio" name="choix_type_client" id="entreprise" value="entreprise" onclick="choixTypeClient()" />
-                                        <label for="ok2">Entreprise</label>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </div>
-                        <div id="form_existant">
-                            <fieldset class="flex-col">
-                                <legend class="text-center"> Client Existant </legend>
-                                <div class="form-group flex-row-between">
-                                    <label for="">Identifiant du client </label>
-                                    <input list="trouve" type="text" name="search" id="search"  onkeyup="searchValid()"/>
-                                    <datalist id="trouve">
+          </div>
 
-                                    </datalist>
-
-                                </div>
-                                <div id="trouve"></div>
-                            </fieldset>
-                        </div>
-                        <div id="form_compte" >
-                            <fieldset  class="flex-col">
-                                <legend class="text-center">Type de compte</legend>
-                                <div  class="flex-row">
-                                    <div class="radio">
-                                        <input type="radio" name="choix_compte" id="simple" value="simple" onclick="choixTypeCompte()"/>
-                                        <label for="ok1">Simple et Xeewel</label>
-                                    </div>
-                                    <div class="radio" id='compte_courant'>
-                                        <input type="radio" name="choix_compte" id="courant" value="courant" onclick="choixTypeCompte()" />
-                                        <label for="ok2">Courant</label>
-                                    </div>
-                                    <div class="radio">
-                                        <input type="radio" name="choix_compte" id="bloque" value="bloque" onclick="choixTypeCompte()"/>
-                                        <label for="ok1">Bloqué</label>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <input type="hidden" id="choixcompte" name="choixcompte" value="">
-                    <div class="flex-row">
-                        <div class="flex-row">
-                            <div id="form_client_physique" class="flex-row">
-                                <fieldset class="flex-col">
-                                    <legend class="text-center"> Nouveau Client Physique</legend>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">CNI</label>
-                                        <input type="text" name="cni" id="cni" onblur="testCNI(this)" />
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Nom</label>
-                                        <input type="text" name="nom" id="nom" onblur="testChamps(this)" />
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Prenom</label>
-                                        <input type="text" name="prenom" id="prenom" onblur="testChamps(this)"/>
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                    <label for="">Sexe</label>
-                                        <select name="sexe" id="sexe" class="" onblur="testChamps(this)" >
-                                            <option value="">----------------</option>
-                                            <option value="masculin">Masculin</option>
-                                            <option value="Feminin">Feminin</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">DateNaiss</label>
-                                        <input type="date" name="datenaiss" id="datenaiss" onblur="testChamps(this)"   />
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Adresse</label>
-                                        <input type="text" name="adr" id="adr"  />
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Telephone</label>
-                                        <input type="text" name="tel" id="tel" onblur="testNumero(this)"   />
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Email (optionnel)</label>
-                                        <input type="email" name="email" id="email" onblur="testEmail(this)"  />
-                                    </div>
-                                </fieldset>
-                            </div>
-                            <div id="form_client_moral" class="flex-row">
-                                <fieldset class="flex-col ">
-                                    <legend class="text-center"> Nouveau Client Entreprise</legend>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Nom Entreprise <span class="white">*</span></label>
-                                        <input type="text" name="nom_entreprise" id="nom_entreprise" onblur="testChamps(this)"/>
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Telephone</label>
-                                        <input type="text" name="tel_entreprise" id="tel_entreprise" onblur="testNumero(this)"  />
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Email (optionnel)</label>
-                                        <input type="email" name="email_entreprise" id="email_entreprise" onblur="testEmail(this)" />
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Budget</label>
-                                        <input type="number" name="budget_entreprise" id="budget_entreprise"onblur="testChamps(this)" />
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Localité </label>
-                                        <input type="text" name="adr_entreprise" id="adr_entreprise"  />
-                                    </div>
-                                </fieldset>
-                            </div>
-                        </div>
-
-                        <div class="flex-row">
-                            <div id="form_compte_simple" class="flex-row">
-                                <fieldset class="flex-col">
-                                    <legend class="text-center"> Compte Simple et Xeewel</legend>
-                                    <div class="form-group">
-                                        <label for="">frais d’ouverture obligatoire : exple : 25 000CFA </label>
-                                        <label for="">Rémunéré annuellement : exple : 10 000CFA </label>
-                                    </div>
-                                </fieldset>
-                            </div>
-                            <div id="form_courant" class="flex-row">
-                                <fieldset class="flex-col">
-                                    <legend class="text-center"> Compte Courant</legend>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Raison social </label>
-                                        <input type="text" name="raison_sociale" id="raison_sociale" onblur="testChamps(this)"/>
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Salaire</label>
-                                        <input type="number" name="salaire" id="salaire" onblur="testChamps(this)"/>
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Nom Employeur</label>
-                                        <input type="text" name="nom_employeur" id="nom_employeur" onblur="testChamps(this)" />
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Adresse</label>
-                                        <input type="text" name="adr_employeur" id="adr_employeur"  />
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">agios  : à retirer tous les trois mois.</label>
-                                    </div>
-                                </fieldset>
-                            </div>
-                            <div id="form_bloque" class="flex-row">
-                                <fieldset class="flex-col">
-                                    <legend class="text-center"> Compte Bloqué</legend>
-                                    <div class="form-group">
-                                        <label for="">frais d’ouverture obligatoire : exple : 25 000CFA </label>
-                                        <label for="">Rémunéré annuellement : exple : 10 000CFA </label>
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Date Debut</label>
-                                        <input type="date" name="date_debut" id="date_debut" onblur="testChamps(this)"/>
-                                    </div>
-                                    <div class="form-group flex-row-between">
-                                        <label for="">Date Fin</label>
-                                        <input type="date" name="date_fin" id="date_fin" onblur="testChamps(this)"/>
-                                    </div>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="float-right">
-                    <input type="submit" class="bg-red" value="Valider" name="valider" id="valider"/>
-                </div>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <section class="text-center bg-white footer">
-            &copy Copyright @Groupe 5
-        </section>
-    </footer>
-    <!-- <script src="/tp3namespace/public/js/test.js"></script> -->
-    <script src="/tp3namespace/public/js/iframe.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

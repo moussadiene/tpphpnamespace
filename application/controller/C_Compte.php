@@ -8,8 +8,9 @@ use application\model\M_Entreprise;
 use application\model\M_Epargne;
 use application\service\Service;
 use core\Controller;
+use Doctrine\DBAL\Exception\ServerException;
 
-    class C_Compte extends Controller{
+class C_Compte extends Controller{
 
         public function __construct(){
             parent::__construct();
@@ -27,6 +28,8 @@ use core\Controller;
             if(isset($valider)){
                 if($choix_client == "nouveau"){
                     if($choix_type_client == "physique"){
+
+
                         $client->setMatricule(Service::codeAleatoire());
                         $client->setCni($cni);
                         $client->setNom($nom);

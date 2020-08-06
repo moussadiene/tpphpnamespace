@@ -9,11 +9,11 @@
         public function __construct(){
 
             new Model();
-
+        
             if(isset($_GET['url'])){
 
                 $url = explode('/',$_GET['url']); // permet de definir un la maniere de separation d'un chaine
-                
+
                 // if($url[0] == "index.php"){
                 //     $url[0] = Autoloader::accueil()['accueil_controller'];
                 // }
