@@ -1,8 +1,5 @@
 <?php
 
-
-    namespace application\entities;
-
     use Doctrine\ORM\Mapping as ORM;
 
         /**
@@ -17,6 +14,10 @@
          * @ORM\GeneratedValue 
          **/
         private $id;
+        /**
+         * @ORM\Column(type="string",unique=true) 
+         **/
+        private $numero;
         /**
          * @ORM\Column(type="string") 
          **/
@@ -76,6 +77,7 @@
 
         public function getID(){return $this->id;}
         public function getDateOuverture(){return $this->dateOuverture;}
+        public function getNumero(){return $this->numero;}
         public function getRib(){return $this->rib;}
         public function getSolde(){return $this->solde;}
 
@@ -100,6 +102,7 @@
 
         public function setID($id){ $this->id = $id;}
         public function setDateOuverture($dateOuverture){ $this->dateOuverture = $dateOuverture;}
+        public function setNumero($numero){ $this->numero = $numero;}
         public function setRib($rib){ $this->rib = $rib;}
         public function setSolde($solde = null){ $this->solde = $solde;}
 

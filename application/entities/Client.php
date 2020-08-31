@@ -1,6 +1,5 @@
 <?php
 
-    namespace application\entities;
 
     use Doctrine\ORM\Mapping as ORM;
     use Doctrine\Common\Collections\ArrayCollection;
@@ -9,15 +8,19 @@
      * @ORM\Table(name="client")
      */
     class Client{
-        /** 
-         * @ORM\Id 
-         * @ORM\Column(type="integer") 
-         * @ORM\GeneratedValue 
+        /**
+         * @ORM\Id
+         * @ORM\Column(type="integer")
+         * @ORM\GeneratedValue
          **/
         private $id;
 
         /**
-         * @ORM\Column(type="string")
+         * @ORM\Column(type="string",unique=true)
+         */
+        private $matricule;
+         /**
+         * @ORM\Column(type="string",unique=true)
          */
         private $cni;
         /**
@@ -80,6 +83,7 @@
         //Getters
         public function getID(){return $this->id;}
         public function getCni(){return $this->cni;}
+        public function getMatricule(){return $this->matricule;}
         public function getPrenom(){return $this->prenom;}
         public function getNom(){return $this->nom;}
         public function getSexe(){return $this->sexe;}
@@ -98,6 +102,7 @@
 
         public function setID($id){$this->id = $id; }
         public function setCni($cni){ $this->cni = $cni;}
+        public function setMatricule($mat){ $this->matricule = $mat;}
         public function setNom($nom){ $this->nom = $nom;}
         public function setPrenom($prenom){ $this->prenom = $prenom;}
         public function setSexe($sexe){ $this->sexe = $sexe;}

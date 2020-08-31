@@ -2,12 +2,12 @@
 namespace core;
     class Model{
 
-        protected $entityManager;
-        //protected $db;
+        //protected $entityManager;
+        protected $db;
         public function __construct()
         {
             require "bootstrap.php";
-            $this->entityManager = getEntitiyManager();
+            $this->db = $entityManager;
             //$this->db = $this->getConnexion();
         }
 

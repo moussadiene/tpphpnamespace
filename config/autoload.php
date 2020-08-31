@@ -48,6 +48,11 @@ namespace config;
             }
 
         }
+        public static function welcome_params(){
+            return array(
+                        'welcome_controller' => 'Dashboad'
+                        );
+        }
     }
     Autoloader::register();
 ?>

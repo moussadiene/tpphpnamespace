@@ -1,9 +1,9 @@
 <?php
 	namespace application\model;
 
-	use application\entities\Client;
 use core\Model;
 
+//require_once './application/entities/Client.php';
 class M_Client extends Model{
 
         public function __construct(){
@@ -12,45 +12,51 @@ class M_Client extends Model{
 
 
 		function searchClientbyCNI(){
-			$sql = $this->db->prepare("SELECT * FROM personne where cni LIKE ?");
-			if($this->db != null)
-			{
-				$sql->execute(array($this->getCni().'%'));
-				return $sql->fetchAll();
-			}else{
-				return 1;
-			}
+			
 		}
 		function getMat(){
-			$sql = $this->db->prepare("SELECT matricule FROM personne where cni = ?");
-			if($this->db != null)
-			{
-				$sql->execute(array($this->getCni()));
-				return $sql->fetchColumn();
-			}else{
-				return 1;
-			}
+			
 		}
 
 
-		public function addClient(){
-		
+		public function add($client){
+			if($this->db != null)
+			{
+				$this->db->persist($client);
+				$this->db->flush();
+	
+				return $client->getId();
+			}
 		}
 
 		public function getList(){
-			return $this->entityManager
-						->createQuery('SELECT c FROM Client c')
-						->getResult();
-			
+			if($this->db != null)
+			{
+				return $this->db->getRepository('Client')->findAll();
+			}
 		}
-		// public function searchClientbyMat($mat){
-		// 	$sql = "SELECT * FROM personne WHERE cni LIKE ?'%".$mat."%'";
-		// 	if($this->db != null)
-		// 	{
-		// 		return $sql->execute();
-		// 	}else{
-		// 		return null;
-		// 	}
-		// }
+		public function getClientById($id)
+		{
+			if($this->db != null)
+			{
+				return $this->db->createQuery("SELECT c FROM Client c WHERE c.id = " . $id)->getSingleResult();
+			}
+		}
+
+		public function liste()
+		{
+			if($this->db != null)
+			{
+				return $this->db->createQuery("SELECT c FROM Client c")->getResult();
+			}
+		}
+
+		public function getClientsByMatricule($mat)
+		{
+			if($this->db != null)
+			{
+				return $this->db->getRepository('Client')->findBy(array('matricule' => $mat));
+			}
+		}
 
 	}

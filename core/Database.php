@@ -8,7 +8,7 @@ namespace core;
                     'host' => 'localhost',
                     'user' => 'djine',
                     'password' => 'mosila21',
-                    'database' => 'banquepeuple',
+                    'database' => 'bp_doctrine',
                     );
             }
     }

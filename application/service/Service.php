@@ -2,7 +2,7 @@
     namespace application\service;
 
     class Service{
-        
+
         public static function codeAleatoire()
         {
             $string = "";

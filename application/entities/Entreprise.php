@@ -1,5 +1,4 @@
 <?php
-    namespace application\entities;
     use Doctrine\ORM\Mapping as ORM;
     use Doctrine\Common\Collections\ArrayCollection;
 
@@ -20,7 +19,7 @@
          **/
         private $nomEntreprise;
         /**
-         * @ORM\Column(type="string") 
+         * @ORM\Column(type="string",unique=true) 
          **/
         private $adresse ;
         /**

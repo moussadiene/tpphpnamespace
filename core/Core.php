@@ -2,21 +2,24 @@
     //require "application/config/Autoloader.php";
   namespace core;
 
-        use core\Model;
+use config\Autoloader;
+use core\Model;
 
     class Core{
 
         public function __construct(){
 
             new Model();
-        
+           
+            if(!isset($_GET['url'])){
+                $_GET['url'] = Autoloader::welcome_params()['welcome_controller'];
+            }
+           
             if(isset($_GET['url'])){
 
                 $url = explode('/',$_GET['url']); // permet de definir un la maniere de separation d'un chaine
 
-                // if($url[0] == "index.php"){
-                //     $url[0] = Autoloader::accueil()['accueil_controller'];
-                // }
+                
 
                 $file = "application/controller/" . $url[0] . ".php";
                
